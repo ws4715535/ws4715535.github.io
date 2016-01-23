@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -57,15 +57,31 @@
 
 
 
-<meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ws">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:
+
+1.中文看着多舒服,人忙忙的,问题解决就ok,想那多干啥
+2.卧槽,密密麻麻这是啥,看两行吓得我电脑都关上了 
+3.问问自己的定位,你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ws看官网文档Block-变量传递(二)">
+<meta property="og:url" content="http://yoursite.com/2016/01/18/123/index.html">
 <meta property="og:site_name" content="Ws">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:
+
+1.中文看着多舒服,人忙忙的,问题解决就ok,想那多干啥
+2.卧槽,密密麻麻这是啥,看两行吓得我电脑都关上了 
+3.问问自己的定位,你">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/902254-d68be18c12370dd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/902254-06e9f376e8d11a8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/902254-55acf929fac6abdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-01-23T14:41:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ws">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="Ws看官网文档Block-变量传递(二)">
+<meta name="twitter:description" content="写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:
+
+1.中文看着多舒服,人忙忙的,问题解决就ok,想那多干啥
+2.卧槽,密密麻麻这是啥,看两行吓得我电脑都关上了 
+3.问问自己的定位,你">
 
 
 
@@ -83,7 +99,7 @@
   };
 </script>
 
-  <title> Ws </title>
+  <title> Ws看官网文档Block-变量传递(二) | Ws </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -102,9 +118,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -203,24 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-      
-      
-        
-        
-        
-      
-
-      
-    
-
-    
-      
 
   
   
@@ -240,10 +239,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/01/18/123/" itemprop="url">
-                  Ws看官网文档Block-变量传递(二)
-                </a>
+                Ws看官网文档Block-变量传递(二)
               
             
           </h1>
@@ -281,9 +277,7 @@
       
 
       
-        
-          
-            <hr>
+        <hr>
 <ul>
 <li><p>写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:</p>
 <ul>
@@ -343,205 +337,45 @@ testBlock();
 <p><img src="http://upload-images.jianshu.io/upload_images/902254-06e9f376e8d11a8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="不加__block,传的是值"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/902254-55acf929fac6abdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="加上__block,是指针"></p>
 
-          
-        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/18/hello-world-1/" itemprop="url">
-                  Its Ws
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-18T15:42:12+08:00" content="2016-01-18">
-              2016-01-18
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="Hello_21_This_is_Ws_u2019s_blog_2C_welcome__7E_21"><a href="#Hello_21_This_is_Ws_u2019s_blog_2C_welcome__7E_21" class="headerlink" title="Hello! This is Ws’s blog, welcome ~!"></a>Hello! This is Ws’s blog, welcome ~!</h2><h3 id="I_am_trying_to_be_a_qualified_developmer__3AD"><a href="#I_am_trying_to_be_a_qualified_developmer__3AD" class="headerlink" title="I am trying to be a qualified developmer :D"></a>I am trying to be a qualified developmer :D</h3><p><img src="http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1308/29/c2/25034043_25034043_1377742065156_mthumb.jpg" alt="" title="我大西安!"></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/01/18/hello-world-1/" rel="next" title="Its Ws">
+                <i class="fa fa-chevron-left"></i> Its Ws
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/01/18/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-18T15:27:57+08:00" content="2016-01-18">
-              2016-01-18
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
 
-  </section>
-
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -549,6 +383,10 @@ testBlock();
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -568,8 +406,17 @@ testBlock();
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xqevf.com1.z0.glb.clouddn.com/blogiocnFace.jpg"
@@ -634,6 +481,23 @@ testBlock();
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u82F1_u6587_u5168_u90E8_u6765_u81EA_u5B98_u65B9_u6587_u6863iOS9-1Document__2C_u5982_u679C_u6709_u9519_u8BEF_2C_u53EF_u80FD_u662F_u590D_u5236_u6216_u8005_u6253_u5B57_u9519_u8BEF_2C__u4EE3_u7801_u8FD8_u6709_u4E09_u5341_u79D2_u5230_u8FBE_u6218_u573A_21_3A"><span class="nav-number">1.</span> <span class="nav-text">英文全部来自官方文档iOS9.1Document ,如果有错误,可能是复制或者打字错误, 代码还有三十秒到达战场!:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-_Blocks_Can_Capture_Values_from_the_Enclosing_Scope"><span class="nav-number">1.0.1.</span> <span class="nav-text">- 1. Blocks Can Capture Values from the Enclosing Scope</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Use___block_Variables_to_Share_Storage_28_u8FD9_u4E2A_u6807_u9898_u81EA_u5DF1_u7FFB_u8BD1_u4E0B_29"><span class="nav-number">1.0.2.</span> <span class="nav-text">- 2.Use __block Variables to Share Storage(这个标题自己翻译下)</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -708,6 +572,167 @@ testBlock();
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
