@@ -64,17 +64,17 @@
 3.问问自己的定位,你">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ws看官网文档Block-变量传递(二)">
-<meta property="og:url" content="http://yoursite.com/2016/01/18/123/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/01/18/文档2/index.html">
 <meta property="og:site_name" content="Ws">
 <meta property="og:description" content="写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:
 
 1.中文看着多舒服,人忙忙的,问题解决就ok,想那多干啥
 2.卧槽,密密麻麻这是啥,看两行吓得我电脑都关上了 
 3.问问自己的定位,你">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/902254-d68be18c12370dd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://i3.hoopchina.com.cn/blogfile/201411/27/BbsImg141708090735799_756*501.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/902254-06e9f376e8d11a8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/902254-55acf929fac6abdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-01-23T14:41:29.000Z">
+<meta property="og:updated_time" content="2016-01-23T15:34:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ws看官网文档Block-变量传递(二)">
 <meta name="twitter:description" content="写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:
@@ -271,7 +271,7 @@
 <p>这个集我想着自己尽量多的总结下官方文档的原文内容(不会大段落的翻译),带着自己(如果能帮到你就更好啦), 咱们去吃一手货!!</p>
 </li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/902254-d68be18c12370dd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://i3.hoopchina.com.cn/blogfile/201411/27/BbsImg141708090735799_756*501.png" alt=""></p>
 <hr>
 <h2 id="u82F1_u6587_u5168_u90E8_u6765_u81EA_u5B98_u65B9_u6587_u6863iOS9-1Document__2C_u5982_u679C_u6709_u9519_u8BEF_2C_u53EF_u80FD_u662F_u590D_u5236_u6216_u8005_u6253_u5B57_u9519_u8BEF_2C__u4EE3_u7801_u8FD8_u6709_u4E09_u5341_u79D2_u5230_u8FBE_u6218_u573A_21_3A"><a href="#u82F1_u6587_u5168_u90E8_u6765_u81EA_u5B98_u65B9_u6587_u6863iOS9-1Document__2C_u5982_u679C_u6709_u9519_u8BEF_2C_u53EF_u80FD_u662F_u590D_u5236_u6216_u8005_u6253_u5B57_u9519_u8BEF_2C__u4EE3_u7801_u8FD8_u6709_u4E09_u5341_u79D2_u5230_u8FBE_u6218_u573A_21_3A" class="headerlink" title="英文全部来自官方文档iOS9.1Document ,如果有错误,可能是复制或者打字错误, 代码还有三十秒到达战场!:"></a>英文全部来自官方文档iOS9.1Document ,如果有错误,可能是复制或者打字错误, 代码还有三十秒到达战场!:</h2><h4 id="1-_Blocks_Can_Capture_Values_from_the_Enclosing_Scope"><a href="#1-_Blocks_Can_Capture_Values_from_the_Enclosing_Scope" class="headerlink" title="- 1. Blocks Can Capture Values from the Enclosing Scope"></a>- 1. <strong><em>Blocks Can Capture Values from the Enclosing Scope</em></strong></h4><p>(先别急着翻译,看下下面的这两个方法,猜下输出先.)<br>As well as containing executable code, a block also has the ability to capture state from its enclosing scope.<br>If you declare a block literal from within a method, for example, it’s possible to capture any of the values accessible within the scope of that method, like this:</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)testMethod &#123;</span><br><span class="line">    <span class="keyword">int</span> anInteger = <span class="number">42</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">void</span> (^testBlock)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Integer is: %i"</span>, anInteger);</span><br><span class="line">    &#125;;</span><br><span class="line"> </span><br><span class="line">    testBlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
