@@ -73,7 +73,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -142,26 +142,6 @@
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
             首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -283,243 +263,18 @@
       
         
           
-            <hr>
-<ul>
-<li><p>写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:</p>
-<ul>
-<li>1.中文看着多舒服,人忙忙的,问题解决就ok,想那多干啥</li>
-<li>2.卧槽,密密麻麻这是啥,看两行吓得我电脑都关上了 </li>
-<li>3.问问自己的定位,你是不是一位合格并且有上进心的开发者? </li>
-</ul>
-<blockquote>
-<p>其实对于大多数开发者来说,入了门之后,耳濡目染的都会写,认识些英文,所以其实还是一个懒,这句话也在说自己. 恍恍惚惚时间就这么没了,maybe失去些东西会让人突然安静下来.自己并非科班出身,学习iOS一直自己做笔记,翻了翻自己的笔记,有些概念模模糊糊模棱两可,觉得是时候总结一波了.不想做咸鱼的我也就在这时候静下心来,看了一晚上苹果官网文档,对,是一晚上.不会的单词右击Look up, 复杂些的google.很恶心自己英文下降很多,但是观后感是:卧槽,这玩意才是武功秘籍好伐, 不管是guide还是一些api说明,实例code,绝逼权威,个人也觉得不会比一些中博客”翻译”过来的难理解. 一晚上,”soga…原来是这样!””这个这么理解才对””妈蛋,吃了这么久的二手甘蔗”,是我整个心理活动.<br>当然夸张了, 只是觉得一是静下心来认真那种感觉很难得,二是官方文档真的很好. </p>
-</blockquote>
-<p>这个集我想着自己尽量多的总结下官方文档的原文内容(不会大段落的翻译),带着自己(如果能帮到你就更好啦), 咱们去吃一手货!!</p>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/902254-d68be18c12370dd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<hr>
-<h2 id="u82F1_u6587_u5168_u90E8_u6765_u81EA_u5B98_u65B9_u6587_u6863iOS9-1Document__2C_u5982_u679C_u6709_u9519_u8BEF_2C_u53EF_u80FD_u662F_u590D_u5236_u6216_u8005_u6253_u5B57_u9519_u8BEF_2C__u4EE3_u7801_u8FD8_u6709_u4E09_u5341_u79D2_u5230_u8FBE_u6218_u573A_21_3A"><a href="#u82F1_u6587_u5168_u90E8_u6765_u81EA_u5B98_u65B9_u6587_u6863iOS9-1Document__2C_u5982_u679C_u6709_u9519_u8BEF_2C_u53EF_u80FD_u662F_u590D_u5236_u6216_u8005_u6253_u5B57_u9519_u8BEF_2C__u4EE3_u7801_u8FD8_u6709_u4E09_u5341_u79D2_u5230_u8FBE_u6218_u573A_21_3A" class="headerlink" title="英文全部来自官方文档iOS9.1Document ,如果有错误,可能是复制或者打字错误, 代码还有三十秒到达战场!:"></a>英文全部来自官方文档iOS9.1Document ,如果有错误,可能是复制或者打字错误, 代码还有三十秒到达战场!:</h2><h4 id="1-_Blocks_Can_Capture_Values_from_the_Enclosing_Scope"><a href="#1-_Blocks_Can_Capture_Values_from_the_Enclosing_Scope" class="headerlink" title="- 1. Blocks Can Capture Values from the Enclosing Scope"></a>- 1. <strong><em>Blocks Can Capture Values from the Enclosing Scope</em></strong></h4><p>(先别急着翻译,看下下面的这两个方法,猜下输出先.)<br>As well as containing executable code, a block also has the ability to capture state from its enclosing scope.<br>If you declare a block literal from within a method, for example, it’s possible to capture any of the values accessible within the scope of that method, like this:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)testMethod &#123;</span><br><span class="line">    <span class="keyword">int</span> anInteger = <span class="number">42</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">void</span> (^testBlock)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Integer is: %i"</span>, anInteger);</span><br><span class="line">    &#125;;</span><br><span class="line"> </span><br><span class="line">    testBlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>In this example, anInteger is declared outside of the block, but the value is captured when the block is defined.</p>
-<p>Only the value is captured, unless you specify otherwise. This means that if you change the external value of the variable between the time you define the block and the time it’s invoked, like this:</p>
-<pre><code>int anInteger = 42;
-
-void (^testBlock)(void) = ^{
-    NSLog(@&quot;Integer is: %i&quot;, anInteger);
-};
-
-anInteger = 84;
-
-testBlock();
-</code></pre><p>the value captured by the block is unaffected. This means that the log output would still show:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Integer is: <span class="number">42</span>      <span class="comment">//输出是42</span></span><br></pre></td></tr></table></figure>
-<pre><code>It also means that the block cannot change the value of the original variable, or even the captured value (it’s captured as a const variable).
-
-这里来总结文档意思: 不仅可以包含可执行代码一样,block能力超群,可以从封闭范围内获取值. 
-其实道理很简单,答案应该有2种: 42 ,84 
-42是觉得,可以的,不过这里是值传递
-84觉得,外面修改了,我里面也用了,有可能吧.
-
-随后文档给了解释: 除非你特殊定义,不然这个局部变量存在Block块儿中,后面你修改,它内部value是不影响的.
-*就像const来修饰一个变量,让它只读!*
-
-问题来了,那么怎样叫特殊定义,怎样可以修改? 来接下来就有解释了.
-</code></pre><h4 id="2-Use___block_Variables_to_Share_Storage_28_u8FD9_u4E2A_u6807_u9898_u81EA_u5DF1_u7FFB_u8BD1_u4E0B_29"><a href="#2-Use___block_Variables_to_Share_Storage_28_u8FD9_u4E2A_u6807_u9898_u81EA_u5DF1_u7FFB_u8BD1_u4E0B_29" class="headerlink" title="- 2.Use __block Variables to Share Storage(这个标题自己翻译下)"></a>- 2.Use __block Variables to Share Storage(这个标题自己翻译下)</h4><p>If you need to be able to change the value of a captured variable from within a block, you can use the __block storage type modifier on the original variable declaration. This means that the variable lives in storage that is shared between the lexical scope of the original variable and any blocks declared within that scope.</p>
-<p>As an example, you might rewrite the previous example like this:<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> __block <span class="keyword">int</span> anInteger = <span class="number">42</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> (^testBlock)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">     <span class="built_in">NSLog</span>(<span class="string">@"Integer is: %i"</span>, anInteger);</span><br><span class="line"> &#125;;</span><br><span class="line"> </span><br><span class="line">anInteger = <span class="number">84</span>;</span><br><span class="line"> </span><br><span class="line">testBlock();</span><br></pre></td></tr></table></figure></p>
-<p>Because anInteger is declared as a __block variable, its storage is shared with the block declaration. This means that the log output would now show:</p>
- <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Integer is: <span class="number">84</span>   <span class="comment">//这里输出就成84了</span></span><br><span class="line">也就是说,用__block修饰变量,外部修改了这个变量,那么block里用得时候,就得注意了,值就变了.</span><br><span class="line">用歪果仁的原文就是,Because anInteger is declared as a __block variable,</span><br><span class="line"> its storage is shared with the block declaration,分享给了你,这思维咋翻译嘛....</span><br><span class="line">也就可以理解为,指针传递,带了__block这个修饰变量,外面修改,里面也会改</span><br></pre></td></tr></table></figure>
-<p>It also means that the block can modify the original value, like this:<br>(在看看这个:)</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  __block <span class="keyword">int</span> anInteger = <span class="number">42</span>;</span><br><span class="line">   <span class="keyword">void</span> (^testBlock)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Integer is: %i"</span>, anInteger);</span><br><span class="line">        anInteger = <span class="number">100</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"> </span><br><span class="line">  testBlock();</span><br><span class="line">  <span class="built_in">NSLog</span>(<span class="string">@"Value of original variable is now: %i"</span>, anInteger);</span><br><span class="line">This time, the output would show:</span><br></pre></td></tr></table></figure>
-<p>输出分别是:<br><strong>Integer is: 42<br>Value of original variable is now: 100</strong></p>
-<ul>
-<li>也就意味者,外部修改变量,会影响block调用时它的值,同时block内部也可以修改,有执行顺序,猜猜那么下段怎么输出.</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)text &#123;</span><br><span class="line">    </span><br><span class="line">    __block <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">void</span>(^block)() = ^<span class="keyword">void</span>() &#123;</span><br><span class="line">        a = <span class="number">20</span>;   <span class="comment">//先修改a</span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"a = %d"</span>,a);</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    block();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@" new a = %d"</span>,a);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//没错,内部是按顺序执行的,   a = 20   ,new a = 20</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>我也很疑惑,为什么加上_ <em>block就可以了,是不是变量作用域的问题. 那么我就不加</em> _block,而是把a修饰成全局的试试?   加上static是什么效果? 自己去试试吧,下面是结果.</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)text &#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">void</span>(^block)() = ^<span class="keyword">void</span>() &#123;</span><br><span class="line">        a = <span class="number">30</span>;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%d"</span>,a);</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">        a = <span class="number">20</span>;</span><br><span class="line">    </span><br><span class="line">    block();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@" new a = %d"</span>,a); </span><br><span class="line">  <span class="comment">/* 输出a = 30; new a = 30; 所以执行顺序就明白了:</span><br><span class="line">     先到a = 20; 然后进block</span><br><span class="line">  */</span></span><br><span class="line">--------------------------------------------</span><br><span class="line">- (<span class="keyword">void</span>)text2 &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">void</span>(^block)() = ^<span class="keyword">void</span>() &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%d"</span>,a);</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">    a = <span class="number">20</span>;</span><br><span class="line">    </span><br><span class="line">    block();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@" new a = %d"</span>,a);</span><br><span class="line">      <span class="comment">/* 输出a = 20; new a = 20; 所以执行顺序就明白了:</span><br><span class="line">     先到a = 20; 然后进block</span><br><span class="line">  */</span></span><br><span class="line">------------------------------</span><br><span class="line">- (<span class="keyword">void</span>)text3 &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">void</span>(^block)() = ^<span class="keyword">void</span>() &#123;</span><br><span class="line">        a = <span class="number">30</span>;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%d"</span>,a);</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">    a = <span class="number">20</span>;</span><br><span class="line">    </span><br><span class="line">    block();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@" new a = %d"</span>,a);</span><br><span class="line">    <span class="comment">//输出 a = 30;  new a = 30;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">所以苹果这里说__block的意义在于,<span class="number">1.</span> 在一个函数中,它不仅可以保存代码块</span><br><span class="line">更是可以跳出那个&#123;&#125;,获取外面的值  <span class="number">2.</span>加上__block后,更是在block块儿内获取外面值得时候,先修改,再存入,</span><br><span class="line">同时block内可以修改这个变量值,这里思想就不会禁锢在变量的作用域上.而是说Block的特性</span><br><span class="line">所以不纠结其他的,总结block下就是两种传递:</span><br><span class="line"><span class="number">1.</span>值传递</span><br><span class="line"><span class="number">2.</span>指针传递.  为啥这么叫,用clang再编译下,然后查找对应传递,就会明白啦!</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/902254-06e9f376e8d11a8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="不加__block,传的是值"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/902254-55acf929fac6abdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="加上__block,是指针"></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/18/hello-world-1/" itemprop="url">
-                  Its Ws
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-18T15:42:12+08:00" content="2016-01-18">
-              2016-01-18
-            </time>
-          </span>
-
           
 
-          
-            
-          
+写在前面:  翻翻各个iOS大牛的博客,或者在他们回答新手如何学习iOS开发时,”多看,一定要看苹果官方文档”这句话100%会出现.”苹果人家是权威,多少博客都是翻译一遍罢了””不要啃人家嚼过的甘蔗”.理都懂,然并卵.就结合自己情况来说,之前也看的不多原因有三:
 
-          
+1.中文看着多舒服,人忙忙的,
+          ...
 
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Hello_21_This_is_Ws_u2019s_blog_2C_welcome__7E_21"><a href="#Hello_21_This_is_Ws_u2019s_blog_2C_welcome__7E_21" class="headerlink" title="Hello! This is Ws’s blog, welcome ~!"></a>Hello! This is Ws’s blog, welcome ~!</h2><h3 id="I_am_trying_to_be_a_qualified_developmer__3AD"><a href="#I_am_trying_to_be_a_qualified_developmer__3AD" class="headerlink" title="I am trying to be a qualified developmer :D"></a>I am trying to be a qualified developmer :D</h3><p><img src="http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1308/29/c2/25034043_25034043_1377742065156_mthumb.jpg" alt="" title="我大西安!"></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/18/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-18T15:27:57+08:00" content="2016-01-18">
-              2016-01-18
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/18/123/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -586,10 +341,10 @@ testBlock();
           </div>
 
           <div class="site-state-item site-state-categories">
-            <a href="/categories">
+            
               <span class="site-state-item-count">0</span>
               <span class="site-state-item-name">分类</span>
-              </a>
+              
           </div>
 
           <div class="site-state-item site-state-tags">
