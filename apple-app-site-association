@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "Y2BW77XLR7.com.ThoughtWorks.McKinseyApp.dev",
+                "paths": ["*"]
+            }
+        ]
+    }
+}
