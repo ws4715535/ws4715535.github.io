@@ -7,19 +7,19 @@
     ["5E:A9:36:E0:FA:BC:81:27:29:13:53:2F:54:9D:63:EB:D2:7C:B1:7E:A5:F6:0C:E9:8A:71:24:98:3C:A1:50:DD"]
   }
 },
-  {
-    "relation": ["delegate_permission/common.get_login_creds"],
-    "target": {
-      "namespace": "web",
-      "site": "https://ws4715535.github.io"
-    }
-  },
-  {
-    "relation": ["delegate_permission/common.get_login_creds"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.mck.company.dev",
-      "sha256_cert_fingerprints":
-      ["5E:A9:36:E0:FA:BC:81:27:29:13:53:2F:54:9D:63:EB:D2:7C:B1:7E:A5:F6:0C:E9:8A:71:24:98:3C:A1:50:DD"]
-    }
-  }]
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://ws4715535.github.io"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mck.company.dev",
+    "sha256_cert_fingerprints":
+    ["5E:A9:36:E0:FA:BC:81:27:29:13:53:2F:54:9D:63:EB:D2:7C:B1:7E:A5:F6:0C:E9:8A:71:24:98:3C:A1:50:DD"]
+  }
+}]g
