@@ -1,0 +1,25 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mck.company.dev",
+    "sha256_cert_fingerprints":
+    ["B8:89:AB:6F:93:E8:E3:D8:84:0D:0B:DF:E8:FB:D6:0D:65:63:77:25:56:02:0F:E3:CD:C4:56:A5:13:1E:72:11"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://ws4715535.github.io"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mck.company.dev",
+    "sha256_cert_fingerprints":
+    ["B8:89:AB:6F:93:E8:E3:D8:84:0D:0B:DF:E8:FB:D6:0D:65:63:77:25:56:02:0F:E3:CD:C4:56:A5:13:1E:72:11"]
+  }
+}]
